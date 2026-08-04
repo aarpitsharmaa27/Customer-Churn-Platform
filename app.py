@@ -45,7 +45,7 @@ print(df["Churn"].value_counts(normalize=True))
 
 df.info()
 
-'''import matplotlib.pyplot as plt    # Matploylib 
+import matplotlib.pyplot as plt    # Matploylib 
 
 plt.figure(figsize=(10,6))
 
@@ -57,15 +57,15 @@ plt.xlabel("Churn")
 
 plt.ylabel("Number of Customers")
 
-#plt.show()'''
+#plt.show()
 
-print(pd.crosstab(df["SeniorCitizen"],df["Churn"]))
+'''print(pd.crosstab(df["SeniorCitizen"],df["Churn"]))
 
 print(pd.crosstab(
     df["SeniorCitizen"],
     df["Churn"],
     normalize="index"
-) * 100) 
+) * 100) '''
 
 '''import seaborn as sns       # Seaborn
 
@@ -112,11 +112,11 @@ print(df.head())
 
 print(df["Contract"].value_counts())
 
-pd.crosstab(
+'''pd.crosstab(
     df["Contract"],
     df["Churn"],
     normalize="index"
-) * 100
+) * 100'''
 
 
 '''import seaborn as sns
@@ -161,10 +161,10 @@ print(df["MonthlyCharges"].describe())
     data = df
 )
 
-plt.show()'''
+plt.show()
 
 
-print(df["tenure"].describe())
+print(df["tenure"].describe())'''
 
 
 # plt.figure(figsize=(10,6))
@@ -400,3 +400,43 @@ from sklearn.metrics import accuracy_score
 accuracy  = accuracy_score(y_test, y_pred)
 
 print(accuracy)
+
+print(f"Accuracy: {accuracy:.4f}")
+
+
+from sklearn.metrics import (
+    accuracy_score,
+    precision_score,
+    recall_score,
+    f1_score
+)
+
+accuracy = accuracy_score(y_test, y_pred)
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
+f1 = f1_score(y_test, y_pred)
+
+print(f"Accuracy : {accuracy:.4f}")
+print(f"Precision: {precision:.4f}")
+print(f"Recall   : {recall:.4f}")
+print(f"F1 Score : {f1:.4f}")
+
+
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, y_pred)
+print(cm)
+
+
+from sklearn.metrics import classification_report
+
+print(classification_report(y_test,y_pred))
+
+y_prob = model.predict_proba(X_test)
+print(y_prob[:10])
+
+
+from sklearn.metrics import roc_auc_score
+
+roc = roc_auc_score(y_test, y_prob[:,1])
+
+print(f"ROC-AUC Score: {roc:.4f}")
