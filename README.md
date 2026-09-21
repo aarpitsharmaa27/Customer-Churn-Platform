@@ -2,40 +2,43 @@
 
 ## Project Overview
 
-This project predicts whether a telecom customer will churn using Machine Learning.
-
 ## Dataset
 
-IBM Telco Customer Churn Dataset
+## Technologies Used
 
-## Technologies
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-
-## Machine Learning Model
-
-- Logistic Regression
-
-## Workflow
+## Machine Learning Pipeline
 
 - Data Cleaning
-- Exploratory Data Analysis
+- EDA
 - Feature Engineering
-- Train-Test Split
-- One-Hot Encoding
 - Logistic Regression
-- Prediction
-- Accuracy Evaluation
 
-## Model Accuracy
+## Evaluation Metrics
 
-79.74%
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- ROC-AUC
+
+## Results
+
+Accuracy : 79.67%
+
+Precision : 64.53%
+
+Recall : 55.38%
+
+F1 Score : 59.60%
+
+ROC-AUC : 0.8413
+
+## Future Improvements
+
+- Decision Tree
+- Random Forest
+- XGBoost
 
 ## Author
 
-Arpit Sharma
+Arpit
